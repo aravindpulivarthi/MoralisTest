@@ -150,9 +150,10 @@ test.describe('Positive Test cases', ()=>{
 
 test.describe('Negative Test Cases', ()=>{
     //Invalid Login Credentials
+    test.setTimeout(50000);
     test('Login with Invalid Credentials', async ({ page }) => {
         await page.goto('https://admin.moralis.io/login');
-        await page.waitForTimeout(1000);
+        await page.waitForTimeout(3000);
         
         try {
             await page.getByRole('button', { name: 'Accept all' }).click();
@@ -165,11 +166,11 @@ test.describe('Negative Test Cases', ()=>{
         await page.fill("//label[@for='admin-login-email']", 'aravindpulivarthiv@gmail.com');
         await page.fill("//label[@for='admin-login-password']", 'sjedhbf2hieh');
         await page.click("//span[normalize-space()='Log in']");
-        //await page.waitForTimeout(50000);
+        await page.waitForTimeout(20000);
         
         // Check for an error message
         const errorMessage = await page.locator("//span[@class='sc-DdwlG kQHBdN']").textContent();
-        expect(errorMessage).toContain('Unauthorized');  
+        await expect(errorMessage).toContain('Unauthorized');  
     
     });
 

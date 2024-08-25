@@ -4,6 +4,7 @@ require('dotenv').config();
 let API_Key;
 const username = process.env.USERNAME;
 const password = process.env.PASSWORD;
+
 test.describe('Positive Tests for getWalletNFTs endpoint',()=>{
     test('Login to Moralis', async ({page})=>{
 
@@ -54,6 +55,7 @@ test.describe('Positive Tests for getWalletNFTs endpoint',()=>{
 });
 
 //*********Negative Scenarios******/
+
 test.describe('Positive Tests for getWalletNFTs endpoint',()=>{
     //Invalid API Key
     test('Fetch NFTs with invalid API Key', async ({ request }) => {
@@ -98,7 +100,7 @@ test.describe('Positive Tests for getWalletNFTs endpoint',()=>{
     test('Fetch NFTs with incorrect chain parameter', async ({ request }) => {
         const response = await request.get('https://deep-index.moralis.io/api/v2/0xff3879b8a363aed92a6eaba8f61f1a96a9ec3c1e/nft', {
             headers: {
-                'X-API-Key': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6ImM5YmE3YWY2LWNlYTctNDhmZi04MWZkLWFjZGEzZWIzY2I5NiIsIm9yZ0lkIjoiNDA1NDI1IiwidXNlcklkIjoiNDE2NTk5IiwidHlwZUlkIjoiNzA3ODdiZTgtMmEyZi00ZjMwLWI5MDYtNzNlODVhN2NmM2RkIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3MjQyMzU4NjksImV4cCI6NDg3OTk5NTg2OX0.23mk1MiOw0VVFhPijskItFQFUiNlB_ipzbRN4mg3KVY',
+                'X-API-Key': API_Key,
             },
             params: {
                 chain: 'invalid_chain',
