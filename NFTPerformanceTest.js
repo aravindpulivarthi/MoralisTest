@@ -9,7 +9,7 @@ export const options = {
 const API_KEY = 'Provide_API_Key';
 
 export default function () {
-  // Define the URL with query parameters included directly in the URL string
+  // Define the URL with query parameters
   const url = `https://deep-index.moralis.io/api/v2/0xff3879b8a363aed92a6eaba8f61f1a96a9ec3c1e/nft?chain=eth`;
 
   // Define the request headers

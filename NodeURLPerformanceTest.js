@@ -1,7 +1,6 @@
 import http from 'k6/http';
 import { check, sleep, fail } from 'k6';
 
-// Configuration options for the test
 export let options = {
     vus: 5, // Number of virtual users
     duration: '30s', // Duration of the test

@@ -34,7 +34,7 @@ test.describe('Positive Test cases', ()=>{
         await page.waitForTimeout(2000)
         await page.selectOption("//span[normalize-space()='Select Network *']", 'Mainnet')  //Select Mainnet as Network
 
-        await page.click("//div[@class='DivContainerStyled-sc-1jzr4nq-0 fffdlS']//button[@type='button'][normalize-space()='Create Node']")          //Click create node
+        await page.click("//div[@class='DivContainerStyled-sc-1jzr4nq-0 fffdlS']//button[@type='button'][normalize-space()='Create Node']")          //Create node
 
         await page.waitForTimeout(3000)
     

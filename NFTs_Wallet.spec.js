@@ -39,7 +39,7 @@ test.describe('Positive Tests for getWalletNFTs endpoint',()=>{
                 'X-API-Key': API_Key,
             },
             params: {
-                chain: 'eth', // Specify the blockchain network, e.g., Ethereum
+                chain: 'eth', // Specify the blockchain network, e.g. Ethereum
                 limit: 10,      //fetch only 10 NFTs
             }
         });
