@@ -29,13 +29,6 @@ Ensure you have Node.js and npm installed on your machine. You will also need to
 
 3. **Install K6**: Follow the [official K6 installation guide](https://k6.io/docs/getting-started/installation/).
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
-```
-
 ### Install Dependencies
 
 Run the following command to install required Node.js packages:
